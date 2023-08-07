@@ -1,0 +1,88 @@
+.TodoForm {
+    display: flex;
+    margin: 10px 8px;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 0, 0, 0.1);
+    border-bottom: 2.5px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  .TodoForm-task {
+    position: relative;
+    transition: opacity 0.4s linear;
+  }
+  
+  .TodoForm-task.completed {
+    opacity: 0.6;
+  }
+  
+  .TodoForm-task.completed:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    animation: strikeitem 0.5s ease-out 0s forwards;
+  }
+  
+  @keyframes strikeitem {
+    to {
+      width: calc(100% + 1rem);
+    }
+  }
+  
+  .TodoForm-buttons {
+    flex-shrink: 0;
+    padding-left: 0.7em;
+  }
+  
+  .TodoForm-buttons button {
+    border: 1px;
+    font-size: 1em;
+    margin: 0.4em;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .TodoForm-edit-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  .TodoForm-edit-form input {
+    flex-grow: 1;
+    border: none;
+    background: #f7f1f1;
+    padding: 0 1.5em;
+    font-size: initial;
+  }
+  
+  .TodoForm-edit-form button {
+    padding: 0 1.3rem;
+    border: none;
+    background: #878787;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    margin-left: 5px;
+    cursor: pointer;
+    transform: background 2s ease-out;
+  }
+  
+  .TodoForm-edit-form button:hover {
+    background: #d6d5d5;
+  }
+  
+  .TodoForm-edit-form input,
+  .TodoForm-edit-form button {
+    font-family: "Quicksand", sans-serif;
+    height: 3rem;
+  }
+  
